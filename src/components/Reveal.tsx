@@ -40,10 +40,10 @@ export function useRevealRoot<T extends HTMLElement>() {
 
 type RevealProps = {
   children: ReactNode;
-  as?: ElementType;
-  delay?: number;
-  mask?: boolean;
-  className?: string;
+  as?: ElementType | undefined;
+  delay?: number | undefined;
+  mask?: boolean | undefined;
+  className?: string | undefined;
 };
 
 export function Reveal({

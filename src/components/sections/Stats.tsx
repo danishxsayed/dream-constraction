@@ -14,8 +14,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     }
     let raf = 0;
     const io = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
+      (entries) => {
+        if (!entries[0]?.isIntersecting) return;
         io.disconnect();
         const start = performance.now();
         const dur = 1400;

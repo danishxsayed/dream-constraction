@@ -58,7 +58,7 @@ function ProjectCard({
 }
 
 export function ProjectGallery() {
-  const [a, b, c, d] = projects;
+  const [a, b, c, d] = projects as [Project, Project, Project, Project];
 
   return (
     <section className="shell py-24 md:py-36">
