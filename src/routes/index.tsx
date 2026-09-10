@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRevealRoot } from "@/components/Reveal";
+import { Hero } from "@/components/sections/Hero";
+import { Stats } from "@/components/sections/Stats";
+import { BrandStatement } from "@/components/sections/BrandStatement";
+import { ProjectGallery } from "@/components/sections/ProjectGallery";
+import { ServicesList } from "@/components/sections/ServicesList";
+import { Journey } from "@/components/sections/Journey";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { FounderSection } from "@/components/sections/FounderSection";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { CTASection } from "@/components/sections/CTASection";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Dream Palace Constructions | Construction Company in Hubli";
+const description =
+  "Dream Palace Constructions is a trusted construction and engineering company in Hubli offering residential construction, commercial construction, structural design, renovation, interior design and landscaping services.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const ref = useRevealRoot<HTMLDivElement>();
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div ref={ref}>
+      <Hero />
+      <BrandStatement />
+      <Stats />
+      <ProjectGallery />
+      <ServicesList />
+      <Journey />
+      <WhyUs />
+      <FounderSection />
+      <Testimonials />
+      <CTASection />
     </div>
   );
 }
