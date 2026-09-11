@@ -14,8 +14,8 @@ export function PageHeader({
       <p data-reveal className="eyebrow text-[10px] text-bronze">
         {eyebrow}
       </p>
-      <h1 data-mask className="mt-8 display-lg">
-        {title}
+      <h1 data-mask="" className="mt-8 display-lg">
+        <span className="mask-inner">{title}</span>
       </h1>
       {intro ? (
         <p

@@ -30,14 +30,13 @@ export function Hero() {
 
         <h1 className="mt-6 display-xl">
           {lines.map((line, i) => (
-            <span key={line} className="block overflow-hidden">
-              <span
-                data-mask="in"
-                className="block"
-                style={{ "--reveal-delay": `${300 + i * 140}ms` } as React.CSSProperties}
-              >
-                {line}
-              </span>
+            <span
+              key={line}
+              data-mask="in"
+              className="block"
+              style={{ "--reveal-delay": `${300 + i * 140}ms` } as React.CSSProperties}
+            >
+              <span className="mask-inner">{line}</span>
             </span>
           ))}
         </h1>

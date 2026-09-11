@@ -33,7 +33,7 @@ function ServicesPage() {
         title={<>What we build.</>}
         intro="Six disciplines. One dedicated team. Every service delivered with the same standard of precision and professionalism, across Hubli-Dharwad and Karnataka."
       />
-      <ServicesList />
+      <ServicesList withHeading={false} />
       <Journey />
       <CTASection />
     </div>
