@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { services } from "@/lib/site-data";
 
-export function ServicesList() {
+export function ServicesList({ withHeading = true }: { withHeading?: boolean }) {
   const [active, setActive] = useState<number | null>(null);
   const [openMobile, setOpenMobile] = useState<number | null>(0);
 
@@ -11,18 +11,20 @@ export function ServicesList() {
       id="services"
       className="relative bg-ink text-ivory transition-colors duration-700"
     >
-      <div className="shell py-24 md:py-36">
-        <div className="grid gap-8 lg:grid-cols-12">
-          <Reveal as="h2" mask className="display-lg lg:col-span-6">
-            What we build.
-          </Reveal>
-          <Reveal delay={140} className="flex items-end lg:col-span-4 lg:col-start-9">
-            <p className="text-sm leading-relaxed text-ivory/55">
-              Six disciplines. One dedicated team. Every service delivered with the same standard
-              of precision and professionalism.
-            </p>
-          </Reveal>
-        </div>
+      <div className={withHeading ? "shell py-24 md:py-36" : "shell py-16 md:py-24"}>
+        {withHeading ? (
+          <div className="grid gap-8 lg:grid-cols-12">
+            <Reveal as="h2" mask className="display-lg lg:col-span-6">
+              What we build.
+            </Reveal>
+            <Reveal delay={140} className="flex items-end lg:col-span-4 lg:col-start-9">
+              <p className="text-sm leading-relaxed text-ivory/55">
+                Six disciplines. One dedicated team. Every service delivered with the same standard
+                of precision and professionalism.
+              </p>
+            </Reveal>
+          </div>
+        ) : null}
 
         {/* Desktop interactive list */}
         <div
