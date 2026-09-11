@@ -62,7 +62,7 @@ export function Navbar() {
               <li key={l.label}>
                 <Link
                   to={l.to}
-                  hash={l.hash}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   className="eyebrow link-underline text-[10px] opacity-80 transition-opacity hover:opacity-100"
                 >
                   {l.label}
@@ -123,7 +123,7 @@ export function Navbar() {
               <li key={l.label} className="border-b border-ivory/10 py-4">
                 <Link
                   to={l.to}
-                  hash={l.hash}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="flex items-baseline gap-4 font-display text-4xl"
                 >
