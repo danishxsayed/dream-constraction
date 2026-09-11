@@ -60,7 +60,7 @@ export function Reveal({
       className={className}
       style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}
     >
-      {children}
+      {mask ? <span className="mask-inner">{children}</span> : children}
     </Tag>
   );
 }
