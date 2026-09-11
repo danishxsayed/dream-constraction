@@ -225,13 +225,18 @@
 }
 
 [data-mask] {
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.9s var(--ease-editorial);
+  overflow: hidden;
+}
+
+[data-mask] > .mask-inner {
+  display: block;
+  transform: translate3d(0, 105%, 0);
+  transition: transform 0.95s var(--ease-editorial);
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-[data-mask="in"] {
-  clip-path: inset(0 0 -10% 0);
+[data-mask="in"] > .mask-inner {
+  transform: none;
 }
 
 @keyframes kenburns {
@@ -278,7 +283,7 @@
     opacity: 1;
     transform: none;
   }
-  [data-mask] {
-    clip-path: none;
+  [data-mask] > .mask-inner {
+    transform: none;
   }
 }
