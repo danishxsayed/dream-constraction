@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { company } from "@/lib/site-data";
-import logoAsset from "@/assets/dream-logo.webp.asset.json";
+import logoImg from "@/assets/dream-logo.webp";
 
 const links = [
   { label: "Projects", to: "/projects", hash: undefined },
@@ -55,8 +55,8 @@ export function Navbar() {
         >
           <Link to="/" className="group flex items-center" aria-label={company.name}>
             <img
-              src={logoAsset.url}
-              alt="Dream Palace Constructions"
+              src={logoImg}
+              alt={company.name}
               width={300}
               height={266}
               className="h-11 w-auto object-contain md:h-14"
@@ -114,8 +114,8 @@ export function Navbar() {
         <div className="shell flex h-full flex-col py-6">
           <div className="flex items-center justify-between">
             <img
-              src={logoAsset.url}
-              alt="Dream Palace Constructions"
+              src={logoImg}
+              alt={company.name}
               width={300}
               height={266}
               className="h-12 w-auto object-contain"

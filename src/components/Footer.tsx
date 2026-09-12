@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { company } from "@/lib/site-data";
-import logoAsset from "@/assets/dream-logo.webp.asset.json";
+import logoImg from "@/assets/dream-logo.webp";
 
 const links = [
   { label: "Projects", to: "/projects" as const },
@@ -16,8 +16,8 @@ export function Footer() {
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <img
-              src={logoAsset.url}
-              alt="Dream Palace Constructions"
+              src={logoImg}
+              alt={company.name}
               width={300}
               height={266}
               loading="lazy"
