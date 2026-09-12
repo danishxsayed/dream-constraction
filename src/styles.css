@@ -160,6 +160,18 @@
   font-weight: 500;
 }
 
+/* Brand-highlight treatment for small editorial labels across the site. */
+.eyebrow.text-bronze {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.28rem 0.38rem 0.24rem;
+  background-color: var(--bronze);
+  color: var(--ink);
+  line-height: 1;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 @utility display-xl {
   font-family: var(--font-display);
   font-weight: 300;
