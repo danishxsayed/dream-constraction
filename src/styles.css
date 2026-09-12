@@ -6,7 +6,7 @@
 
 /*
  * Dream Palace Constructions — premium editorial architecture design system.
- * Ivory + near-black + architectural bronze. Serif display / sans UI.
+ * Ivory + near-black + Dream Palace yellow. Serif display / sans UI.
  */
 
 @theme inline {
@@ -55,7 +55,7 @@
   --ivory: oklch(0.962 0.008 85);
   --ink: oklch(0.19 0 0);
   --ink-soft: oklch(0.255 0 0);
-  --bronze: oklch(0.685 0.058 78);
+  --bronze: #f9dc34;
 
   --background: oklch(0.962 0.008 85);
   --foreground: oklch(0.19 0 0);
@@ -63,20 +63,20 @@
   --card-foreground: oklch(0.19 0 0);
   --popover: oklch(0.978 0.006 85);
   --popover-foreground: oklch(0.19 0 0);
-  --primary: oklch(0.19 0 0);
-  --primary-foreground: oklch(0.962 0.008 85);
+  --primary: #f9dc34;
+  --primary-foreground: oklch(0.19 0 0);
   --secondary: oklch(0.93 0.008 85);
   --secondary-foreground: oklch(0.19 0 0);
   --muted: oklch(0.93 0.008 85);
   --muted-foreground: oklch(0.55 0.008 80);
-  --accent: oklch(0.685 0.058 78);
+  --accent: #f9dc34;
   --accent-foreground: oklch(0.19 0 0);
   --destructive: oklch(0.52 0.17 27);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.19 0 0 / 12%);
   --hairline: oklch(0.19 0 0 / 12%);
   --input: oklch(0.19 0 0 / 18%);
-  --ring: oklch(0.685 0.058 78);
+  --ring: #f9dc34;
 }
 
 .dark {
@@ -86,18 +86,18 @@
   --card-foreground: oklch(0.962 0.008 85);
   --popover: oklch(0.255 0 0);
   --popover-foreground: oklch(0.962 0.008 85);
-  --primary: oklch(0.962 0.008 85);
+  --primary: #f9dc34;
   --primary-foreground: oklch(0.19 0 0);
   --secondary: oklch(0.255 0 0);
   --secondary-foreground: oklch(0.962 0.008 85);
   --muted: oklch(0.255 0 0);
   --muted-foreground: oklch(0.68 0.008 80);
-  --accent: oklch(0.685 0.058 78);
+  --accent: #f9dc34;
   --accent-foreground: oklch(0.19 0 0);
   --border: oklch(1 0 0 / 14%);
   --hairline: oklch(1 0 0 / 14%);
   --input: oklch(1 0 0 / 20%);
-  --ring: oklch(0.685 0.058 78);
+  --ring: #f9dc34;
 }
 
 @layer base {
