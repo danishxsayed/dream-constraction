@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { company } from "@/lib/site-data";
+import logoAsset from "@/assets/dream-logo.webp.asset.json";
 
 const links = [
   { label: "Projects", to: "/projects", hash: undefined },
@@ -52,9 +53,14 @@ export function Navbar() {
             light ? "text-ivory" : "text-foreground",
           ].join(" ")}
         >
-          <Link to="/" className="group flex flex-col leading-none" aria-label={company.name}>
-            <span className="font-display text-xl tracking-tight md:text-2xl">Dream Palace</span>
-            <span className="eyebrow mt-1 text-[9px] opacity-70">Constructions</span>
+          <Link to="/" className="group flex items-center" aria-label={company.name}>
+            <img
+              src={logoAsset.url}
+              alt="Dream Palace Constructions"
+              width={300}
+              height={266}
+              className="h-11 w-auto object-contain md:h-14"
+            />
           </Link>
 
           <ul className="hidden items-center gap-10 lg:flex">
@@ -107,7 +113,13 @@ export function Navbar() {
       >
         <div className="shell flex h-full flex-col py-6">
           <div className="flex items-center justify-between">
-            <span className="font-display text-xl">Dream Palace</span>
+            <img
+              src={logoAsset.url}
+              alt="Dream Palace Constructions"
+              width={300}
+              height={266}
+              className="h-12 w-auto object-contain"
+            />
             <button
               type="button"
               onClick={() => setOpen(false)}

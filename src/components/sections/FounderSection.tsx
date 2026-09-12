@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import founderImg from "@/assets/founder.jpg";
+import founderAsset from "@/assets/founder-upload.webp.asset.json";
 import { company } from "@/lib/site-data";
 
 export function FounderSection() {
@@ -9,10 +9,10 @@ export function FounderSection() {
         <Reveal className="lg:col-span-5">
           <div className="relative overflow-hidden">
             <img
-              src={founderImg}
+              src={founderAsset.url}
               alt={`${company.founder}, founder of ${company.name}`}
-              width={1008}
-              height={1312}
+              width={768}
+              height={950}
               loading="lazy"
               className="aspect-[4/5] w-full object-cover"
             />

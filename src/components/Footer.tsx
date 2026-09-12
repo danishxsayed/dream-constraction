@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { company } from "@/lib/site-data";
+import logoAsset from "@/assets/dream-logo.webp.asset.json";
 
 const links = [
   { label: "Projects", to: "/projects" as const },
@@ -14,11 +15,14 @@ export function Footer() {
       <div className="shell py-20 md:py-28">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="font-display text-4xl leading-none md:text-5xl">
-              Dream Palace
-              <br />
-              Constructions
-            </p>
+            <img
+              src={logoAsset.url}
+              alt="Dream Palace Constructions"
+              width={300}
+              height={266}
+              loading="lazy"
+              className="h-28 w-auto object-contain"
+            />
             <p className="mt-5 max-w-xs text-sm text-ivory/55">{company.tagline}</p>
           </div>
 
