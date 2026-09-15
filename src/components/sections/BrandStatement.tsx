@@ -27,7 +27,7 @@ export function BrandStatement() {
           </Reveal>
         </div>
 
-        <div className="flex flex-col justify-end lg:col-span-4 lg:col-start-9">
+        <div className="flex flex-col justify-end lg:col-span-5 lg:col-start-8">
           <Reveal delay={200}>
             <p className="text-base leading-relaxed text-muted-foreground">
               At Dream Palace Constructions, we believe every project deserves more than

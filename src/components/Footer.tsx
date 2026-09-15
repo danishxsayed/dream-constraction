@@ -13,8 +13,8 @@ export function Footer() {
   return (
     <footer className="bg-ink text-ivory">
       <div className="shell py-20 md:py-28">
-        <div className="grid gap-14 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+        <div className="grid gap-14 lg:grid-cols-3 xl:grid-cols-12">
+          <div className="lg:col-span-3 xl:col-span-5">
             <img
               src={logoImg}
               alt={company.name}
@@ -66,7 +66,7 @@ export function Footer() {
             </div>
           </div>
 
-          <nav aria-label="Footer" className="lg:col-span-2">
+          <nav aria-label="Footer" className="xl:col-span-2">
             <p className="eyebrow text-[10px] text-bronze">Navigate</p>
             <ul className="mt-6 space-y-3 text-sm text-ivory/70">
               {links.map((l) => (
@@ -79,7 +79,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="lg:col-span-2">
+          <div className="xl:col-span-2">
             <p className="eyebrow text-[10px] text-bronze">Contact</p>
             <ul className="mt-6 space-y-3 text-sm text-ivory/70">
               {company.phones.map((p) => (
@@ -97,7 +97,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <address className="not-italic lg:col-span-3">
+          <address className="not-italic xl:col-span-3">
             <p className="eyebrow text-[10px] text-bronze">Studio</p>
             <p className="mt-6 text-sm leading-relaxed text-ivory/70">
               {company.address.map((line) => (

@@ -19,7 +19,7 @@ export function FounderSection() {
           </div>
         </Reveal>
 
-        <div className="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+        <div className="flex flex-col justify-center lg:col-span-7 lg:col-start-6">
           <Reveal>
             <p className="eyebrow text-[10px] text-bronze">Founder</p>
           </Reveal>

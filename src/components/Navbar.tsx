@@ -63,7 +63,7 @@ export function Navbar() {
             />
           </Link>
 
-          <ul className="hidden items-center gap-10 lg:flex">
+          <ul className="hidden items-center gap-5 xl:gap-10 lg:flex">
             {links.map((l) => (
               <li key={l.label}>
                 <Link
@@ -82,7 +82,7 @@ export function Navbar() {
               to="/contact"
               data-cursor="OPEN →"
               className={[
-                "eyebrow hidden border px-6 py-3 text-[10px] transition-colors duration-500 ease-editorial lg:inline-block",
+                "eyebrow hidden border px-4 py-2.5 xl:px-6 xl:py-3 text-[10px] transition-colors duration-500 ease-editorial lg:inline-block",
                 light
                   ? "border-ivory/40 text-ivory hover:border-bronze hover:bg-bronze hover:text-ink"
                   : "border-ink/25 hover:border-bronze hover:bg-bronze hover:text-ink",

@@ -57,7 +57,7 @@ export function ServicesList({ withHeading = true }: { withHeading?: boolean }) 
 
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute right-[6%] top-1/2 h-[22rem] w-[16rem] -translate-y-1/2 overflow-hidden transition-all duration-700 ease-editorial"
+            className="pointer-events-none absolute right-0 top-1/2 h-[18rem] w-[13rem] xl:right-[6%] xl:h-[22rem] xl:w-[16rem] -translate-y-1/2 overflow-hidden transition-all duration-700 ease-editorial"
             style={{
               opacity: active === null ? 0 : 1,
               transform: `translateY(calc(-50% + ${active === null ? 0 : (active - 2.5) * 26}px))`,

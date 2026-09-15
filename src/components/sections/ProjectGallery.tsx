@@ -86,12 +86,12 @@ export function ProjectGallery() {
         <ProjectCard
           project={c}
           aspect="aspect-[4/3]"
-          className="lg:col-span-5 lg:col-start-2"
+          className="lg:col-span-6 xl:col-span-5 xl:col-start-2"
         />
         <ProjectCard
           project={d}
           aspect="aspect-[16/11]"
-          className="lg:col-span-6 lg:col-start-7 lg:mt-24"
+          className="lg:col-span-6 xl:col-start-7 xl:mt-24"
         />
       </div>
 
