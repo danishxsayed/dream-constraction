@@ -10,16 +10,37 @@ import blueprintImg from "@/assets/blueprint.jpg";
 export const company = {
   name: "Dream Palace Constructions",
   tagline: "Building dreams into reality.",
+  established: "2012",
   founder: "Er. Vasant P Paste",
-  credentials: "B.E. (Civil) · MIE · Chartered Engineer (India)",
-  address: ["#10 Prashant Colony,", "Vidyanagar,", "Hubli – 580031,", "Karnataka"],
-  addressLine: "#10 Prashant Colony, Vidyanagar, Hubli – 580031, Karnataka",
-  phones: ["8095860301", "7019214441"],
+  credentials: "Engineer & Founder",
+  address: [
+    "#10, Gurudev Land mark,",
+    "behind L T PUJARI, Shirur Park,",
+    "Vidyanagar, Hubballi – 580031,",
+    "Karnataka",
+  ],
+  addressLine:
+    "#10, Gurudev Land mark behind L T PUJARI, Shirur Park, Vidyanagar, Hubballi – 580031, Karnataka",
+  phones: ["8095860301"],
   email: "info@dreampalaceconstructions.com",
   hours: ["Monday – Saturday", "10:30 AM – 6:00 PM"],
   whatsapp: "918095860301",
   whatsappMessage:
     "Hello Dream Palace Constructions, I would like to discuss a construction project.",
+  socials: [
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=100068765484803",
+    },
+    {
+      name: "Instagram",
+      href: "https://instagram.com",
+    },
+    {
+      name: "X",
+      href: "https://x.com",
+    },
+  ],
 };
 
 export const whatsappHref = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
@@ -35,7 +56,7 @@ export const navLinks = [
 ] as const;
 
 export const stats = [
-  { value: 18, suffix: "+", label: "Years of Experience" },
+  { value: 15, suffix: "+", label: "Years of Experience" },
   { value: 350, suffix: "+", label: "Projects Completed" },
   { value: 500, suffix: "+", label: "Happy Clients" },
   { value: 6, suffix: "", label: "Service Verticals" },
@@ -221,7 +242,7 @@ export const whyPoints = [
 ];
 
 export const principles = [
-  "Licensed & Chartered",
+  "Established 2012",
   "Transparent Pricing",
   "On-Time Delivery",
   "End-to-End Service",

@@ -25,7 +25,7 @@ export function Hero() {
           className="eyebrow text-[10px] text-bronze"
           style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
         >
-          Certified Engineers · Hubli, Karnataka
+          Engineers &amp; Builders · Hubballi, Karnataka
         </p>
 
         <h1 className="mt-6 display-xl">
@@ -78,7 +78,7 @@ export function Hero() {
             <span className="eyebrow text-[9px]">Scroll to explore</span>
             <span aria-hidden="true">↓</span>
           </div>
-          <p className="eyebrow text-[9px] text-ivory/60">18+ Years of Experience</p>
+          <p className="eyebrow text-[9px] text-ivory/60">Est. 2012 · 15+ Years of Experience</p>
         </div>
       </div>
     </section>

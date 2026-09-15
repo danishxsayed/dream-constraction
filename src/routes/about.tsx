@@ -9,9 +9,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { CTASection } from "@/components/sections/CTASection";
 import { principles, images } from "@/lib/site-data";
 
-const title = "About | Chartered Engineer-Led Builders in Hubli";
+const title = "About | Engineer-Led Builders in Hubballi";
 const description =
-  "Founded by a Chartered Engineer, Dream Palace Constructions brings 18+ years of hands-on construction and project management experience to homes and businesses across Hubli, Karnataka.";
+  "Established in 2012 by Er. Vasant P Paste, Dream Palace Constructions brings 15+ years of hands-on construction and engineering experience to homes and businesses across Hubballi, Karnataka.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -57,9 +57,9 @@ function AboutPage() {
           <Reveal className="lg:col-span-6">
             <p className="text-base leading-relaxed text-ink/80">
               At Dream Palace Constructions, we believe great buildings begin with great
-              relationships. Founded by a Chartered Engineer with decades of hands-on experience,
-              we approach every project with the same commitment: your vision, our expertise, zero
-              compromise on quality.
+              relationships. Established in 2012 by an experienced engineer with 15+ years of
+              hands-on expertise, we approach every project with the same commitment: your
+              vision, our expertise, zero compromise on quality.
             </p>
           </Reveal>
           <Reveal delay={140} className="lg:col-span-5 lg:col-start-8">

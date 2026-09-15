@@ -74,18 +74,18 @@ const localBusinessSchema = {
   "@type": "GeneralContractor",
   name: company.name,
   description:
-    "Construction, structural engineering, interior design and landscaping company based in Hubli, Karnataka.",
+    "Construction, structural engineering, interior design and landscaping company based in Hubballi, Karnataka. Established 2012.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "#10 Prashant Colony, Vidyanagar",
-    addressLocality: "Hubli",
+    streetAddress: "#10, Gurudev Land mark, behind L T PUJARI, Shirur Park, Vidyanagar",
+    addressLocality: "Hubballi",
     postalCode: "580031",
     addressRegion: "Karnataka",
     addressCountry: "IN",
   },
   telephone: company.phones.map((p) => `+91${p}`),
   email: company.email,
-  founder: { "@type": "Person", name: company.founder, jobTitle: "Chartered Engineer (India)" },
+  founder: { "@type": "Person", name: company.founder, jobTitle: "Engineer & Founder" },
   areaServed: "Hubli-Dharwad, Karnataka",
   openingHours: "Mo-Sa 10:30-18:00",
   makesOffer: [

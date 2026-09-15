@@ -6,7 +6,7 @@ export function MapSection() {
       <div className="shell grid gap-10 py-20 lg:grid-cols-12 md:py-28">
         <div className="lg:col-span-4">
           <p className="eyebrow text-[10px] text-bronze">Find the studio</p>
-          <h2 className="mt-6 display-md">Vidyanagar, Hubli.</h2>
+          <h2 className="mt-6 display-md">Vidyanagar, Hubballi.</h2>
           <address className="mt-8 not-italic text-sm leading-relaxed text-ivory/60">
             {company.address.map((l) => (
               <span key={l} className="block">

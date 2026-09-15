@@ -33,7 +33,7 @@ export function FounderSection() {
             <div className="mt-10 border-t border-ivory/12 pt-8">
               <p className="font-display text-3xl">{company.founder}</p>
               <p className="eyebrow mt-3 text-[9px] text-ivory/45">
-                B.E. (Civil) · MIE · Chartered Engineer (India) · Founder
+                Engineer &amp; Founder
               </p>
             </div>
           </Reveal>
@@ -41,9 +41,9 @@ export function FounderSection() {
           <Reveal delay={220}>
             <div className="mt-8 space-y-5 text-sm leading-relaxed text-ivory/60">
               <p>
-                Dream Palace Constructions was founded on decades of practical engineering
-                experience and a simple belief: construction should be built on trust, technical
-                knowledge and accountability.
+                Dream Palace Constructions was established in 2012 on 15+ years of practical
+                engineering experience and a simple belief: construction should be built on trust,
+                technical knowledge and personal accountability.
               </p>
               <p>
                 At Dream Palace, every project is approached with a solution-driven mindset —
