@@ -180,7 +180,7 @@
   font-weight: 300;
   line-height: 0.92;
   letter-spacing: -0.03em;
-  font-size: clamp(3rem, 8vw, 10rem);
+  font-size: clamp(3rem, min(8vw, 10vh), 10rem);
 }
 
 @utility display-lg {

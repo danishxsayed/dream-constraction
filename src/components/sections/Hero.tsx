@@ -19,7 +19,7 @@ export function Hero() {
         className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-ink/85"
       />
 
-      <div className="shell relative flex h-full flex-col justify-end pb-16 text-ivory md:pb-20">
+      <div className="shell relative flex h-full flex-col justify-end pb-16 pt-24 text-ivory md:pb-20">
         <p
           data-reveal="in"
           className="eyebrow text-[10px] text-bronze"
