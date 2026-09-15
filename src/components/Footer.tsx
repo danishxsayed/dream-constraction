@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { company } from "@/lib/site-data";
-import logoImg from "@/assets/dream-logo.webp";
+import logoImg from "@/assets/dream-logo.png";
 
 const links = [
   { label: "Projects", to: "/projects" as const },

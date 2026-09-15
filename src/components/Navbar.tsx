@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { company } from "@/lib/site-data";
-import logoImg from "@/assets/dream-logo.webp";
+import logoImg from "@/assets/dream-logo.png";
 
 const links = [
   { label: "Projects", to: "/projects", hash: undefined },
