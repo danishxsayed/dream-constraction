@@ -33,7 +33,7 @@ export const company = {
     },
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/dream_palace_constructions",
     },
     {
       name: "X",
