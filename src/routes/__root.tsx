@@ -94,7 +94,6 @@ const localBusinessSchema = {
     "Building Renovation",
     "Structural Designing",
     "Interior Designing",
-    "Landscaping & External Works",
   ].map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s } })),
 };
 

@@ -4,7 +4,6 @@ import p2 from "@/assets/project-02.jpg";
 import p3 from "@/assets/project-03.jpg";
 import p4 from "@/assets/project-04.jpg";
 import renovationImg from "@/assets/service-renovation.jpg";
-import landscapeImg from "@/assets/service-landscape.jpg";
 import blueprintImg from "@/assets/blueprint.jpg";
 
 export const company = {
@@ -106,13 +105,6 @@ export const services: Service[] = [
     body: "Transforming spaces into personalized environments — from detailed brief through procurement, installation and final handover.",
     image: p3,
   },
-  {
-    no: "06",
-    title: "Landscaping & External Works",
-    slug: "landscaping-external-works",
-    body: "Paved areas, stone features, pergolas, ponds and bound-aggregate paths designed to add lasting value and character to your property.",
-    image: landscapeImg,
-  },
 ];
 
 export type Project = {
@@ -144,7 +136,7 @@ export const projects: Project[] = [
     overview:
       "A turnkey family residence delivered from foundation to finishing. The brief called for generous daylight, durable material choices and a clear, predictable build programme.",
     scope: "Turnkey construction, finishing works, external works",
-    servicesUsed: ["Residential Construction", "Interior Designing", "Landscaping & External Works"],
+    servicesUsed: ["Residential Construction", "Interior Designing"],
     gallery: [p1, p3, landscapeImg],
     placeholder: true,
   },
