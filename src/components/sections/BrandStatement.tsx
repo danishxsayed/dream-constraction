@@ -29,7 +29,7 @@ export function BrandStatement() {
 
         <div className="flex flex-col justify-end lg:col-span-5 lg:col-start-8">
           <Reveal delay={200}>
-            <p className="text-base leading-relaxed text-muted-foreground">
+            <p className="text-base leading-relaxed text-muted-foreground lg:text-xl">
               At Dream Palace Constructions, we believe every project deserves more than
               construction. It deserves thoughtful planning, technical expertise, clear
               communication and a commitment to getting the details right.

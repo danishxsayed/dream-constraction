@@ -69,7 +69,7 @@ export function ProjectGallery() {
           for themselves.
         </Reveal>
         <Reveal delay={140} className="flex items-end lg:col-span-4 lg:col-start-9">
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
             From homes and commercial spaces to structural and interior projects, every project
             reflects our commitment to precision and quality.
           </p>

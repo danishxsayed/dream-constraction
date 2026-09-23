@@ -11,7 +11,7 @@ export function WhyUs() {
           Delivered with care.
         </Reveal>
         <Reveal delay={140} className="flex items-end lg:col-span-4 lg:col-start-9">
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
             A wealth of construction and project management experience, combined with a team that
             genuinely cares about your outcome.
           </p>

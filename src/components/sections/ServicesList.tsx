@@ -18,7 +18,7 @@ export function ServicesList({ withHeading = true }: { withHeading?: boolean }) 
               What we build.
             </Reveal>
             <Reveal delay={140} className="flex items-end lg:col-span-4 lg:col-start-9">
-              <p className="text-sm leading-relaxed text-ivory/55">
+              <p className="text-sm leading-relaxed text-ivory/55 md:text-base lg:text-lg">
                 Six disciplines. One dedicated team. Every service delivered with the same standard
                 of precision and professionalism.
               </p>

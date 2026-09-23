@@ -11,7 +11,7 @@ export function ProcessTimeline() {
           to build.
         </Reveal>
         <Reveal delay={140} className="flex items-end lg:col-span-4 lg:col-start-9">
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
             We manage every stage of the journey with clarity, technical expertise and attention to
             detail — giving clients one trusted team from concept to completion.
           </p>
