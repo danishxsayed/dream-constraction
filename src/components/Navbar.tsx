@@ -41,7 +41,7 @@ export function Navbar() {
         className={[
           "fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-editorial",
           scrolled
-            ? "border-b border-hairline bg-background/85 backdrop-blur-xl"
+            ? "border-b border-hairline bg-background backdrop-blur-xl"
             : "border-b border-transparent",
         ].join(" ")}
       >
