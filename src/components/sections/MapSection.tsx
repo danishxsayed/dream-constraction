@@ -28,7 +28,7 @@ export function MapSection() {
           <div className="relative aspect-[16/10] w-full overflow-hidden border border-ivory/12">
             <iframe
               title={`Map showing ${company.name} in Hubli`}
-              src={`https://www.google.com/maps?q=${encodeURIComponent(company.addressLine)}&output=embed`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(company.addressLine)}&z=17&output=embed`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 h-full w-full grayscale contrast-125"

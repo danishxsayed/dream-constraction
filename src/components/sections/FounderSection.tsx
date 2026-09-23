@@ -51,7 +51,7 @@ export function FounderSection() {
                 foundation to finishing.
               </p>
             </div>
-            <p className="mt-10 font-display text-4xl italic text-bronze/80">V. P. Paste</p>
+            <p className="mt-10 font-display text-4xl italic text-bronze/80">E. P. Paste</p>
           </Reveal>
         </div>
       </div>
