@@ -137,7 +137,7 @@ export const projects: Project[] = [
       "A turnkey family residence delivered from foundation to finishing. The brief called for generous daylight, durable material choices and a clear, predictable build programme.",
     scope: "Turnkey construction, finishing works, external works",
     servicesUsed: ["Residential Construction", "Interior Designing"],
-    gallery: [p1, p3, landscapeImg],
+    gallery: [p1, p3, p4],
     placeholder: true,
   },
   {
