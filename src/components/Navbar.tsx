@@ -53,7 +53,7 @@ export function Navbar() {
             light ? "text-ivory" : "text-foreground",
           ].join(" ")}
         >
-          <Link to="/" className="group flex items-center" aria-label={company.name}>
+          <a href="/" className="group flex items-center" aria-label={company.name}>
             <img
               src={logoImg}
               alt={company.name}
@@ -61,7 +61,7 @@ export function Navbar() {
               height={266}
               className="h-14 w-auto object-contain md:h-20"
             />
-          </Link>
+          </a>
 
           <ul className="hidden items-center gap-5 xl:gap-10 lg:flex">
             {links.map((l) => (
