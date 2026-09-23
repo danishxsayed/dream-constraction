@@ -14,7 +14,7 @@ export function FounderSection() {
               width={768}
               height={950}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover object-top"
+              className="w-full object-contain"
             />
           </div>
         </Reveal>
