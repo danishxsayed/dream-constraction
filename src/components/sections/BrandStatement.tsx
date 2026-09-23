@@ -22,7 +22,7 @@ export function BrandStatement() {
               <br />
               Our expertise.
               <br />
-              <span className="text-bronze">Zero compromise.</span>
+              <span style={{ color: "#A07820" }}>Zero compromise.</span>
             </p>
           </Reveal>
         </div>
