@@ -91,7 +91,7 @@ const localBusinessSchema = {
   makesOffer: [
     "Residential Construction",
     "Commercial Construction",
-    "Building Renovation",
+    "Renovation",
     "Structural Designing",
     "Interior Designing",
   ].map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s } })),

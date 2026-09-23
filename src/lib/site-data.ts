@@ -86,7 +86,7 @@ export const services: Service[] = [
   },
   {
     no: "03",
-    title: "Building Renovation",
+    title: "Renovation",
     slug: "building-renovation",
     body: "Breathe new life into existing structures through thoughtful restoration and technically appropriate renovation methods.",
     image: renovationImg,
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     overview:
       "An interior programme taken from detailed brief through procurement, installation and final handover, with a restrained material palette and bespoke joinery.",
     scope: "Interior design, procurement, installation",
-    servicesUsed: ["Interior Designing", "Building Renovation"],
+    servicesUsed: ["Interior Designing", "Renovation"],
     gallery: [p3, renovationImg, p1],
     placeholder: true,
   },
