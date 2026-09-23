@@ -21,7 +21,7 @@ export function Footer() {
               width={300}
               height={266}
               loading="lazy"
-              className="h-28 w-auto object-contain"
+              className="h-36 w-auto object-contain"
             />
             <p className="mt-5 max-w-xs text-sm text-ivory/55">{company.tagline}</p>
             <p className="mt-2 text-xs text-bronze/90">Est. {company.established} · 15+ Years Experience</p>

@@ -59,7 +59,7 @@ export function Navbar() {
               alt={company.name}
               width={300}
               height={266}
-              className="h-11 w-auto object-contain md:h-14"
+              className="h-14 w-auto object-contain md:h-20"
             />
           </Link>
 
