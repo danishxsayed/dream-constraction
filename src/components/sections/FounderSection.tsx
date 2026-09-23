@@ -6,15 +6,15 @@ export function FounderSection() {
   return (
     <section className="bg-ink text-ivory">
       <div className="shell grid gap-14 py-24 lg:grid-cols-12 lg:gap-16 md:py-36">
-        <Reveal className="lg:col-span-5">
-          <div className="relative overflow-hidden">
+        <Reveal className="lg:col-span-5 lg:self-stretch">
+          <div className="relative h-full min-h-[400px] overflow-hidden">
             <img
               src={founderImg}
               alt={`${company.founder}, founder of ${company.name}`}
               width={768}
               height={950}
               loading="lazy"
-              className="w-full object-contain"
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
           </div>
         </Reveal>
