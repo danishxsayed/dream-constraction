@@ -1,23 +1,58 @@
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero.jpg";
+import { useEffect, useState } from "react";
+import slide1 from "@/assets/Dream_Palace_Constructions_Structural_Project_No-06.JPG";
+import slide2 from "@/assets/layout and farmland project upcoming.png";
+import slide3 from "@/assets/8 (3).png";
+import slide4 from "@/assets/Founder new.jpeg";
+
+const slides = [slide4, slide1, slide2, slide3];
 
 const lines = ["Building", "Dreams", "Into Reality."];
 
 export function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative h-[100svh] min-h-[620px] w-full overflow-hidden bg-ink">
-      <img
-        src={heroImg}
-        alt="Modern architectural residence at dusk built by Dream Palace Constructions"
-        width={1920}
-        height={1280}
-        fetchPriority="high"
-        className="hero-media absolute inset-0 h-full w-full object-cover"
-      />
+      {slides.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt=""
+          aria-hidden={i !== current}
+          fetchPriority={i === 0 ? "high" : "low"}
+          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
+          style={{ opacity: i === current ? 1 : 0 }}
+        />
+      ))}
+
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-ink/85"
       />
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-6 right-6 z-10 flex gap-2">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            aria-label={`Slide ${i + 1}`}
+            className="h-1.5 rounded-full transition-all duration-300"
+            style={{
+              width: i === current ? "24px" : "6px",
+              backgroundColor: i === current ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
+            }}
+          />
+        ))}
+      </div>
 
       <div className="shell relative flex h-full flex-col justify-end pb-16 pt-24 text-ivory md:pb-20">
         <p

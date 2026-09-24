@@ -302,3 +302,12 @@
     transform: none;
   }
 }
+
+/* ── Botpress webchat — position left ── */
+#bp-web-widget-container,
+[data-id="bp-web-widget"],
+.bpw-widget-btn,
+.bpw-layout {
+  left: 20px !important;
+  right: auto !important;
+}

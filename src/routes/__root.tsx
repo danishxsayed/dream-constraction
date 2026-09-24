@@ -143,6 +143,18 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2026/09/24/05/20260924054632-DX0EVWCI.js" defer></script>
+        <style>{`
+          #bp-web-widget-container,
+          [data-id="bp-web-widget"],
+          .bpw-widget-btn,
+          .bpw-layout,
+          .bpw-floating-button {
+            left: 20px !important;
+            right: auto !important;
+          }
+        `}</style>
       </body>
     </html>
   );

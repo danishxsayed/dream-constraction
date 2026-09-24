@@ -1,10 +1,43 @@
-import heroImg from "@/assets/hero.jpg";
-import p1 from "@/assets/project-01.jpg";
-import p2 from "@/assets/project-02.jpg";
-import p3 from "@/assets/project-03.jpg";
-import p4 from "@/assets/project-04.jpg";
-import renovationImg from "@/assets/service-renovation.jpg";
 import blueprintImg from "@/assets/blueprint.jpg";
+
+// Residential
+import res1 from "@/assets/Residential/DPC_VPP.jpeg";
+import res2 from "@/assets/Residential/Dream_Palace_Constructions_Consult_Cont_Project_No-30.JPG";
+import res3 from "@/assets/Residential/Dream_Palace_Constructions_Consult_Cont_Project_No-32.JPG";
+import res4 from "@/assets/Residential/Dream_Palace_Constructions_Structural_Project_No-19.JPG";
+import res5 from "@/assets/Residential/IMG_4501.JPG";
+import res6 from "@/assets/Residential/Ingalalli at DWD.jpg";
+
+// Commercial & Institutional
+import com1 from "@/assets/Commercial and Institutional/Dream_Palace_Constructions_Consult_Cont_Project_No-12.JPG";
+import com2 from "@/assets/Commercial and Institutional/Dream_Palace_Constructions_Consult_Cont_Project_No-18.JPG";
+import com3 from "@/assets/Commercial and Institutional/Dream_Palace_Constructions_Consult_Cont_Project_No-22.JPG";
+import com4 from "@/assets/Commercial and Institutional/Dream_Palace_Constructions_Consult_Cont_Project_No-28.JPG";
+import com5 from "@/assets/Commercial and Institutional/commercial complex at Hungund.jpg";
+import com6 from "@/assets/Commercial and Institutional/Dream_palace_constructions_Shri_Laxminarayan_Temmple.jpg";
+
+// Renovation
+import ren1 from "@/assets/Renovation/Dream_Palace_Constructions_Structural_Project_No-29.jpeg";
+import ren2 from "@/assets/Renovation/Dream_Palace_Constructions_Structural_Project_No-30.jpeg";
+import ren3 from "@/assets/Renovation/WhatsApp Image 2021-08-29 at 4.50.18 PM.jpeg";
+import ren4 from "@/assets/Renovation/WhatsApp Image 2026-09-22 at 1.52.36 PM.jpeg";
+
+// Structural
+import str1 from "@/assets/Structural/Dream_Palace_Constructions_Structural_Project_No-05.JPG";
+import str2 from "@/assets/Structural/Dream_Palace_Constructions_Structural_Project_No-09.JPG";
+import str3 from "@/assets/Structural/Dream_Palace_Constructions_Structural_Project_No-14.JPG";
+import str4 from "@/assets/Structural/IMG_4503.JPG";
+import str5 from "@/assets/Structural/WhatsApp Image 2025-11-22 at 4.06.16 PM.jpeg";
+
+// Interior
+import int1 from "@/assets/Interior/hubli marvel project 1.jpg";
+import int2 from "@/assets/Interior/hubli marvel project 2 office boss cabin.jpg";
+import int3 from "@/assets/Interior/banglore rr nagar living area.jpg";
+import int4 from "@/assets/Interior/banglore rr nagar living area 2.jpg";
+import int5 from "@/assets/Interior/dharwad project bedroom.jpg";
+import int6 from "@/assets/Interior/dharwad project kitchen 1.jpg";
+import int7 from "@/assets/Interior/kudalsangam school 1.jpg";
+import int8 from "@/assets/Interior/banglore rr nagar kitchen 1.jpg";
 
 export const company = {
   name: "Dream Palace Constructions",
@@ -74,36 +107,36 @@ export const services: Service[] = [
     no: "01",
     title: "Residential Construction",
     slug: "residential-construction",
-    body: "Complete turnkey home construction from blueprint to handover. We work closely with you and your architect to build the home you've envisioned, on time and within budget.",
-    image: p1,
+    body: "Complete turnkey home construction from blueprint to handover. We work closely with you and your architect to build the home you’ve envisioned, on time and within budget.",
+    image: res6,
   },
   {
     no: "02",
     title: "Commercial Construction",
     slug: "commercial-construction",
     body: "Office fitouts, retail spaces, restaurant refurbishments and mid-scale commercial premises — delivered to specification with minimal operational disruption.",
-    image: p2,
+    image: com5,
   },
   {
     no: "03",
     title: "Renovation",
     slug: "building-renovation",
     body: "Breathe new life into existing structures through thoughtful restoration and technically appropriate renovation methods.",
-    image: renovationImg,
+    image: ren4,
   },
   {
     no: "04",
     title: "Structural Designing",
     slug: "structural-designing",
     body: "Integrated structural design and analysis using modern software, delivering safe, efficient and rationally optimized structures across Hubli-Dharwad.",
-    image: p4,
+    image: str1,
   },
   {
     no: "05",
     title: "Interior Designing",
     slug: "interior-designing",
     body: "Transforming spaces into personalized environments — from detailed brief through procurement, installation and final handover.",
-    image: p3,
+    image: int1,
   },
 ];
 
@@ -121,65 +154,75 @@ export type Project = {
   placeholder: true;
 };
 
-/**
- * Placeholder portfolio entries — names, descriptions and imagery are
- * indicative and structured so real project records can replace them 1:1.
- */
 export const projects: Project[] = [
   {
     no: "01",
-    slug: "residence-project-one",
-    name: "Residence Project One",
+    slug: "residential-project-one",
+    name: "Residential Project",
     category: "Residential Construction",
-    location: "Hubli, Karnataka",
-    cover: p1,
+    location: "Hubli-Dharwad, Karnataka",
+    cover: res6,
     overview:
       "A turnkey family residence delivered from foundation to finishing. The brief called for generous daylight, durable material choices and a clear, predictable build programme.",
     scope: "Turnkey construction, finishing works, external works",
     servicesUsed: ["Residential Construction", "Interior Designing"],
-    gallery: [p1, p3, p4],
+    gallery: [res6, res1, res2, res3, res4, res5],
     placeholder: true,
   },
   {
     no: "02",
     slug: "commercial-project-two",
-    name: "Commercial Project Two",
+    name: "Commercial & Institutional Project",
     category: "Commercial Construction",
     location: "Hubli-Dharwad, Karnataka",
-    cover: p2,
+    cover: com5,
     overview:
       "A mid-scale commercial premises built to specification with careful staging so adjacent operations continued uninterrupted throughout the programme.",
     scope: "Shell and core, fitout coordination, handover",
     servicesUsed: ["Commercial Construction", "Structural Designing"],
-    gallery: [p2, p4, blueprintImg],
+    gallery: [com5, com1, com2, com3, com4, com6],
     placeholder: true,
   },
   {
     no: "03",
     slug: "interior-project-three",
-    name: "Interior Project Three",
+    name: "Interior Design Project",
     category: "Interior Designing",
-    location: "Vidyanagar, Hubli",
-    cover: p3,
+    location: "Hubli-Bengaluru, Karnataka",
+    cover: int1,
     overview:
       "An interior programme taken from detailed brief through procurement, installation and final handover, with a restrained material palette and bespoke joinery.",
     scope: "Interior design, procurement, installation",
     servicesUsed: ["Interior Designing", "Renovation"],
-    gallery: [p3, renovationImg, p1],
+    gallery: [int1, int2, int3, int4, int5, int6, int7, int8],
     placeholder: true,
   },
   {
     no: "04",
     slug: "structural-project-four",
-    name: "Structural Project Four",
+    name: "Structural Design Project",
     category: "Structural Designing",
     location: "Dharwad, Karnataka",
-    cover: p4,
+    cover: str1,
     overview:
       "Integrated structural design and site supervision for a multi-storey frame, rationalised for efficient material use and buildability.",
     scope: "Structural design, analysis, site supervision",
     servicesUsed: ["Structural Designing", "Commercial Construction"],
-    gallery: [p4, blueprintImg, p2],
+    gallery: [str1, str2, str3, str4, str5],
+    placeholder: true,
+  },
+  {
+    no: "05",
+    slug: "renovation-project-five",
+    name: "Renovation Project",
+    category: "Renovation",
+    location: "Hubli-Dharwad, Karnataka",
+    cover: ren4,
+    overview:
+      "A comprehensive renovation breathing new life into an existing structure through thoughtful restoration and technically appropriate methods.",
+    scope: "Structural renovation, finishing works, site supervision",
+    servicesUsed: ["Renovation", "Structural Designing"],
+    gallery: [ren4, ren1, ren2, ren3],
     placeholder: true,
   },
 ];
@@ -261,4 +304,4 @@ export const testimonials = [
   },
 ];
 
-export const images = { hero: heroImg, blueprint: blueprintImg };
+export const images = { blueprint: blueprintImg };

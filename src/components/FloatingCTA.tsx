@@ -15,7 +15,7 @@ export function FloatingCTA() {
   return (
     <div
       className={[
-        "fixed bottom-5 right-5 z-40 flex items-center gap-3 transition-all duration-700 ease-editorial",
+        "fixed bottom-5 left-5 z-40 flex flex-row-reverse items-center gap-3 transition-all duration-700 ease-editorial",
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0",
       ].join(" ")}
     >
