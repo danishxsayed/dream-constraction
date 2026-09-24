@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import founderImg from "@/assets/founder-new.jpeg";
+import founderImg from "@/assets/founder.webp";
 import { company } from "@/lib/site-data";
 
 export function FounderSection() {
