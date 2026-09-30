@@ -286,6 +286,12 @@ export const principles = [
 export const testimonials = [
   {
     quote:
+      "I am extremely happy and satisfied with the interior quality, finishing, and overall workmanship done by Dream Palace Constructions for our office. Their professional approach, attention to detail, quality of work, and commitment to timelines truly deserve appreciation. The final outcome has given our office a professional and elegant look that perfectly reflects our business. Highly recommended to anyone looking for trusted, professional, and quality interior services.",
+    name: "Marvel",
+    role: "SIR Financial Services Pvt. Ltd., Marvel Ecron, Gokul Road, Hubballi",
+  },
+  {
+    quote:
       "I would recommend Dream Palace Constructions without hesitation for any project in their field. Highly professional, attentive, and delivered exactly what was promised.",
     name: "S.R. Navalihiremath",
     role: "Founder President, SSR Education & SW Trust, Bengaluru",
