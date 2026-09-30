@@ -21,8 +21,6 @@ export function BrandStatement() {
               Your vision.
               <br />
               Our expertise.
-              <br />
-              <span style={{ color: "#A07820" }}>Zero compromise.</span>
             </p>
           </Reveal>
         </div>
