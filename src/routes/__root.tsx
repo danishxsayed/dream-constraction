@@ -141,6 +141,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: "if('scrollRestoration' in history){history.scrollRestoration='manual';}window.addEventListener('load',function(){window.scrollTo(0,0);});" }} />
         {children}
         <Scripts />
         <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
