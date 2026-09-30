@@ -53,7 +53,17 @@ export function Navbar() {
             light ? "text-ivory" : "text-foreground",
           ].join(" ")}
         >
-          <a href="/" className="group flex flex-col items-center" aria-label={company.name}>
+          <a
+            href="/"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="group flex flex-col items-center"
+            aria-label={company.name}
+          >
             <img
               src={logoImg}
               alt={company.name}
