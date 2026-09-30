@@ -164,7 +164,7 @@ export const projects: Project[] = [
     name: "Residential Project",
     category: "Residential Construction",
     location: "Hubli-Dharwad, Karnataka",
-    cover: res6,
+    cover: res1,
     overview:
       "A turnkey family residence delivered from foundation to finishing. The brief called for generous daylight, durable material choices and a clear, predictable build programme.",
     scope: "Turnkey construction, finishing works, external works",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     name: "Interior Design Project",
     category: "Interior Designing",
     location: "Hubli-Bengaluru, Karnataka",
-    cover: int1,
+    cover: intHero,
     overview:
       "An interior programme taken from detailed brief through procurement, installation and final handover, with a restrained material palette and bespoke joinery.",
     scope: "Interior design, procurement, installation",
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     name: "Structural Design Project",
     category: "Structural Designing",
     location: "Dharwad, Karnataka",
-    cover: str1,
+    cover: strHero,
     overview:
       "Integrated structural design and site supervision for a multi-storey frame, rationalised for efficient material use and buildability.",
     scope: "Structural design, analysis, site supervision",
@@ -220,7 +220,7 @@ export const projects: Project[] = [
     name: "Renovation Project",
     category: "Renovation",
     location: "Hubli-Dharwad, Karnataka",
-    cover: ren4,
+    cover: renHero,
     overview:
       "A comprehensive renovation breathing new life into an existing structure through thoughtful restoration and technically appropriate methods.",
     scope: "Structural renovation, finishing works, site supervision",
