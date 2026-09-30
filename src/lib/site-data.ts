@@ -21,6 +21,9 @@ import ren1 from "@/assets/Renovation/Dream_Palace_Constructions_Structural_Proj
 import ren2 from "@/assets/Renovation/Dream_Palace_Constructions_Structural_Project_No-30.jpeg";
 import ren3 from "@/assets/Renovation/WhatsApp Image 2021-08-29 at 4.50.18 PM.jpeg";
 import ren4 from "@/assets/Renovation/WhatsApp Image 2026-09-22 at 1.52.36 PM.jpeg";
+import renHero from "@/assets/Renovation/Renovation.jpeg";
+import strHero from "@/assets/Structural/strcutural.jpeg";
+import intHero from "@/assets/Interior/upcoming project bhailhongal bedroom 1 (1).jpg";
 
 // Structural
 import str1 from "@/assets/Structural/Dream_Palace_Constructions_Structural_Project_No-05.JPG";
@@ -89,8 +92,8 @@ export const navLinks = [
 
 export const stats = [
   { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 350, suffix: "+", label: "Projects Completed" },
-  { value: 500, suffix: "+", label: "Happy Clients" },
+  { value: 300, suffix: "+", label: "Projects Completed" },
+  { value: 400, suffix: "+", label: "Happy Clients" },
   { value: 6, suffix: "", label: "Service Verticals" },
 ];
 
@@ -108,7 +111,7 @@ export const services: Service[] = [
     title: "Residential Construction",
     slug: "residential-construction",
     body: "Complete turnkey home construction from blueprint to handover. We work closely with you and your architect to build the home you’ve envisioned, on time and within budget.",
-    image: res6,
+    image: res1,
   },
   {
     no: "02",
@@ -122,21 +125,21 @@ export const services: Service[] = [
     title: "Renovation",
     slug: "building-renovation",
     body: "Breathe new life into existing structures through thoughtful restoration and technically appropriate renovation methods.",
-    image: ren4,
+    image: renHero,
   },
   {
     no: "04",
     title: "Structural Designing",
     slug: "structural-designing",
     body: "Integrated structural design and analysis using modern software, delivering safe, efficient and rationally optimized structures across Hubli-Dharwad.",
-    image: str1,
+    image: strHero,
   },
   {
     no: "05",
     title: "Interior Designing",
     slug: "interior-designing",
     body: "Transforming spaces into personalized environments — from detailed brief through procurement, installation and final handover.",
-    image: int1,
+    image: intHero,
   },
 ];
 
