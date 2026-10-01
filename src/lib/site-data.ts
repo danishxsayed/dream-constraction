@@ -32,6 +32,13 @@ import str3 from "@/assets/Structural/Dream_Palace_Constructions_Structural_Proj
 import str4 from "@/assets/Structural/IMG_4503.JPG";
 import str5 from "@/assets/Structural/WhatsApp Image 2025-11-22 at 4.06.16 PM.jpeg";
 
+// Team
+import teamKrishna from "@/assets/Our Team/Krishna Y B Srtuctural Engg..jpeg";
+import teamManjunath from "@/assets/Our Team/Manjunarh_Hondadkatti_Structural Engg.jpg";
+import teamPadma from "@/assets/Our Team/Padma_Drafting & Detailing.jpg";
+import teamSagar from "@/assets/Our Team/Sagar Hiremat_Interior Designer.jpg";
+import teamSunil from "@/assets/Our Team/Sunil Aparanji_Designer.jpeg";
+
 // Interior
 import int1 from "@/assets/Interior/hubli marvel project 1.jpg";
 import int2 from "@/assets/Interior/hubli marvel project 2 office boss cabin.jpg";
@@ -314,3 +321,17 @@ export const testimonials = [
 ];
 
 export const images = { blueprint: blueprintImg };
+
+export type TeamMember = {
+  name: string;
+  designation: string;
+  image: string;
+};
+
+export const team: TeamMember[] = [
+  { name: "Krishna Y B", designation: "Structural Engineer", image: teamKrishna },
+  { name: "Manjunath Hondadkatti", designation: "Structural Engineer", image: teamManjunath },
+  { name: "Padma", designation: "Drafting & Detailing", image: teamPadma },
+  { name: "Sagar Hiremat", designation: "Interior Designer", image: teamSagar },
+  { name: "Sunil Aparanji", designation: "Designer", image: teamSunil },
+];

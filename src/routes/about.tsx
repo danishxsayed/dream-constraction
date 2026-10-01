@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Stats } from "@/components/sections/Stats";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { FounderSection } from "@/components/sections/FounderSection";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTASection } from "@/components/sections/CTASection";
@@ -89,6 +90,7 @@ function AboutPage() {
 
       <Stats />
       <FounderSection />
+      <TeamSection />
       <ProcessTimeline />
       <WhyUs />
       <Testimonials />
