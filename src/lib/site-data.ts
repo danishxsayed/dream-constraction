@@ -38,6 +38,8 @@ import teamManjunath from "@/assets/Our Team/Manjunarh_Hondadkatti_Structural En
 import teamPadma from "@/assets/Our Team/Padma_Drafting & Detailing.jpg";
 import teamSagar from "@/assets/Our Team/Sagar Hiremat_Interior Designer.jpg";
 import teamSunil from "@/assets/Our Team/Sunil Aparanji_Designer.jpeg";
+import teamAkashta from "@/assets/Our Team/Akashta_Drafting & Detailing.jpeg";
+import teamKrishnaDirector from "@/assets/Our Team/Krishna P P_managing director.jpeg";
 
 // Interior
 import int1 from "@/assets/Interior/hubli marvel project 1.jpg";
@@ -329,9 +331,11 @@ export type TeamMember = {
 };
 
 export const team: TeamMember[] = [
+  { name: "Krishna P P", designation: "Managing Director", image: teamKrishnaDirector },
   { name: "Krishna Y B", designation: "Structural Engineer", image: teamKrishna },
   { name: "Manjunath Hondadkatti", designation: "Structural Engineer", image: teamManjunath },
   { name: "Padma", designation: "Drafting & Detailing", image: teamPadma },
+  { name: "Akashta", designation: "Drafting & Detailing", image: teamAkashta },
   { name: "Sagar Hiremat", designation: "Interior Designer", image: teamSagar },
   { name: "Sunil Aparanji", designation: "Designer", image: teamSunil },
 ];
