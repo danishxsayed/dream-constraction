@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { company } from "@/lib/site-data";
 import logoImg from "@/assets/dream-logo.png";
+import brochurePdf from "@/assets/dream_palace_constructions_brochure_updated (1) (1).pdf (2).pdf?url";
 
 const links = [
   { label: "Projects", to: "/projects", hash: undefined },
@@ -89,6 +90,20 @@ export function Navbar() {
           </ul>
 
           <div className="flex items-center gap-4">
+            <a
+              href={brochurePdf}
+              download="Dream_Palace_Constructions_Brochure.pdf"
+              className={[
+                "eyebrow hidden items-center gap-2 border px-4 py-2.5 xl:px-5 xl:py-3 text-[10px] transition-colors duration-500 ease-editorial lg:inline-flex",
+                light
+                  ? "border-ivory/40 text-ivory hover:border-bronze hover:bg-bronze hover:text-ink"
+                  : "border-ink/25 hover:border-bronze hover:bg-bronze hover:text-ink",
+              ].join(" ")}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Brochure
+            </a>
+
             <Link
               to="/contact"
               data-cursor="OPEN →"
