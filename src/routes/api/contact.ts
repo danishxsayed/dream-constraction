@@ -16,7 +16,7 @@ export const APIRoute = createAPIFileRoute("/api/contact")({
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: "Dream Palace Website <onboarding@resend.dev>",
+      from: "Dream Palace Constructions <noreply@dreampalaceconstructions.com>",
       to: ["info@dreampalaceconstructions.com"],
       subject: `New Enquiry from ${name}`,
       html: `
