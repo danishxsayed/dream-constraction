@@ -5,14 +5,39 @@ const fieldClass =
   "w-full border-0 border-b border-hairline bg-transparent py-4 text-base outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-bronze";
 
 export function ContactForm() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
-  if (sent) {
+  if (status === "sent") {
     return (
       <div className="border-t border-hairline py-16">
         <p className="eyebrow text-[10px] text-bronze">Enquiry received</p>
@@ -22,7 +47,7 @@ export function ContactForm() {
         </p>
         <button
           type="button"
-          onClick={() => setSent(false)}
+          onClick={() => setStatus("idle")}
           className="eyebrow mt-10 border-b border-ink/25 pb-2 text-[10px] transition-colors hover:border-bronze hover:text-bronze"
         >
           Send another enquiry
@@ -87,12 +112,19 @@ export function ContactForm() {
         <textarea id="message" name="message" rows={4} className={`${fieldClass} resize-none`} />
       </div>
 
+      {status === "error" && (
+        <p className="eyebrow text-[10px] text-red-500">
+          Something went wrong. Please try again or contact us directly by phone.
+        </p>
+      )}
+
       <button
         type="submit"
+        disabled={status === "sending"}
         data-cursor="OPEN →"
-        className="eyebrow bg-ink px-10 py-5 text-[10px] text-ivory transition-colors hover:bg-bronze hover:text-ink"
+        className="eyebrow bg-ink px-10 py-5 text-[10px] text-ivory transition-colors hover:bg-bronze hover:text-ink disabled:opacity-50"
       >
-        Send Enquiry →
+        {status === "sending" ? "Sending…" : "Send Enquiry →"}
       </button>
     </form>
   );
