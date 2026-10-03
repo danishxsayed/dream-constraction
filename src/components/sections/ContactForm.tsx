@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { services } from "@/lib/site-data";
+import { sendEnquiry } from "@/lib/send-enquiry";
 
 const fieldClass =
   "w-full border-0 border-b border-hairline bg-transparent py-4 text-base outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-bronze";
@@ -15,24 +16,16 @@ export function ContactForm() {
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value || undefined,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value || undefined,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value || undefined,
     };
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        setStatus("sent");
-      } else {
-        setStatus("error");
-      }
-    } catch {
+      await sendEnquiry({ data });
+      setStatus("sent");
+    } catch (err) {
+      console.error("Enquiry error:", err);
       setStatus("error");
     }
   };
