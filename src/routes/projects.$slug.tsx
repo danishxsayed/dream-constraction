@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useRevealRoot, Reveal } from "@/components/Reveal";
 import { projects } from "@/lib/site-data";
+import { useState, useEffect, useCallback } from "react";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -49,12 +50,109 @@ function ProjectNotFound() {
   );
 }
 
+function Lightbox({
+  images,
+  index,
+  onClose,
+}: {
+  images: string[];
+  index: number;
+  onClose: () => void;
+}) {
+  const [current, setCurrent] = useState(index);
+
+  const prev = useCallback(() => setCurrent((c) => (c - 1 + images.length) % images.length), [images.length]);
+  const next = useCallback(() => setCurrent((c) => (c + 1) % images.length), [images.length]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose, prev, next]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink/95"
+      onClick={onClose}
+    >
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        aria-label="Close lightbox"
+        className="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center text-ivory/70 hover:text-ivory"
+      >
+        <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-current stroke-2">
+          <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+
+      {/* Prev button */}
+      {images.length > 1 && (
+        <button
+          onClick={(e) => { e.stopPropagation(); prev(); }}
+          aria-label="Previous image"
+          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center text-ivory/70 hover:text-ivory"
+        >
+          <svg viewBox="0 0 24 24" className="h-7 w-7 fill-none stroke-current stroke-2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      )}
+
+      {/* Image */}
+      <img
+        src={images[current]}
+        alt={`Gallery image ${current + 1}`}
+        className="max-h-[90vh] max-w-[90vw] object-contain"
+        onClick={(e) => e.stopPropagation()}
+      />
+
+      {/* Next button */}
+      {images.length > 1 && (
+        <button
+          onClick={(e) => { e.stopPropagation(); next(); }}
+          aria-label="Next image"
+          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center text-ivory/70 hover:text-ivory"
+        >
+          <svg viewBox="0 0 24 24" className="h-7 w-7 fill-none stroke-current stroke-2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      )}
+
+      {/* Counter */}
+      {images.length > 1 && (
+        <p className="absolute bottom-6 left-1/2 -translate-x-1/2 eyebrow text-[10px] text-ivory/50">
+          {current + 1} / {images.length}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function ProjectDetail() {
   const { project, next } = Route.useLoaderData();
   const ref = useRevealRoot<HTMLDivElement>();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
     <div ref={ref} key={project.slug}>
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={project.gallery}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
+
       <section className="relative h-[72svh] min-h-[460px] overflow-hidden bg-ink">
         <img
           src={project.cover}
@@ -97,12 +195,27 @@ function ProjectDetail() {
                     : "lg:col-span-5 lg:mt-16"
               }
             >
-              <img
-                src={src}
-                alt={`${project.name} gallery image ${i + 1}`}
-                loading="lazy"
-                className={`w-full object-cover ${i === 0 ? "aspect-[16/9]" : "aspect-[4/3]"}`}
-              />
+              <button
+                type="button"
+                onClick={() => setLightboxIndex(i)}
+                className="group relative block w-full cursor-zoom-in overflow-hidden"
+                aria-label={`View ${project.name} gallery image ${i + 1} in full screen`}
+              >
+                <img
+                  src={src}
+                  alt={`${project.name} gallery image ${i + 1}`}
+                  loading="lazy"
+                  className="w-full object-contain transition-transform duration-700 ease-editorial group-hover:scale-[1.03]"
+                />
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 flex items-center justify-center bg-ink/0 opacity-0 transition-all duration-300 group-hover:bg-ink/25 group-hover:opacity-100"
+                >
+                  <svg viewBox="0 0 24 24" className="h-8 w-8 fill-none stroke-ivory stroke-1.5 drop-shadow">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-2 0v4m-2-2h4" />
+                  </svg>
+                </span>
+              </button>
             </Reveal>
           ))}
         </div>

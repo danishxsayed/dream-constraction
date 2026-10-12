@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import slide1 from "@/assets/Dream_Palace_Constructions_Structural_Project_No-06.JPG";
 import slide2 from "@/assets/layout and farmland project upcoming.png";
-import slide3 from "@/assets/8 (3).png";
+import slide3 from "@/assets/f3.jpg";
 import slide4 from "@/assets/Founder new.jpeg";
 
 const slides = [slide4, slide1, slide2, slide3];

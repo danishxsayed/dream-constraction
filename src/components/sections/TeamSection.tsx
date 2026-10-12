@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { team } from "@/lib/site-data";
 
+const ALL = "All";
+const DEFAULT_ROLE = "Managing Director";
+
+const roles = [ALL, ...Array.from(new Set(team.map((m) => m.designation)))];
+
 export function TeamSection() {
+  const [activeRole, setActiveRole] = useState(DEFAULT_ROLE);
+
+  const filtered = activeRole === ALL ? team : team.filter((m) => m.designation === activeRole);
+
   return (
     <section className="shell py-24 md:py-36">
       <Reveal>
@@ -11,24 +21,42 @@ export function TeamSection() {
         The people behind<br />every project.
       </Reveal>
 
+      {/* Role filter tabs */}
+      <div className="mt-10 flex flex-wrap gap-2">
+        {roles.map((role) => (
+          <button
+            key={role}
+            type="button"
+            onClick={() => setActiveRole(role)}
+            className={[
+              "eyebrow px-5 py-2.5 text-[10px] border transition-colors duration-200",
+              activeRole === role
+                ? "border-bronze bg-bronze text-ink"
+                : "border-ink/20 bg-transparent text-ink/50 hover:border-bronze hover:text-bronze",
+            ].join(" ")}
+          >
+            {role}
+          </button>
+        ))}
+      </div>
+
+      {/* Plain grid — no Reveal wrapper so items are always visible after filter */}
       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {team.map((member, i) => (
-          <Reveal key={member.name} delay={i * 80}>
-            <div className="group">
-              <div className="overflow-hidden aspect-[3/4]">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  loading="lazy"
-                  className="h-full w-full object-cover object-top transition-transform duration-700 ease-editorial group-hover:scale-[1.04]"
-                />
-              </div>
-              <div className="mt-5 border-t border-hairline pt-4">
-                <p className="font-display text-xl leading-snug">{member.name}</p>
-                <p className="mt-1 eyebrow text-[10px] text-bronze">{member.designation}</p>
-              </div>
+        {filtered.map((member) => (
+          <div key={member.name} className="group">
+            <div className="overflow-hidden aspect-[3/4]">
+              <img
+                src={member.image}
+                alt={member.name}
+                loading="lazy"
+                className="h-full w-full object-cover object-top transition-transform duration-700 ease-editorial group-hover:scale-[1.04]"
+              />
             </div>
-          </Reveal>
+            <div className="mt-5 border-t border-hairline pt-4">
+              <p className="font-display text-xl leading-snug">{member.name}</p>
+              <p className="mt-1 eyebrow text-[10px] text-bronze">{member.designation}</p>
+            </div>
+          </div>
         ))}
       </div>
     </section>

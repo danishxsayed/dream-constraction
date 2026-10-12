@@ -70,7 +70,7 @@ export function Navbar() {
               alt={company.name}
               width={300}
               height={266}
-              className="h-14 w-auto object-contain md:h-20"
+              className="h-20 w-auto object-contain md:h-28"
             />
             <span className="eyebrow text-[8px] tracking-widest text-ink/60 md:text-[9px]">You Dream It, We Build It</span>
           </a>
@@ -144,7 +144,7 @@ export function Navbar() {
               alt={company.name}
               width={300}
               height={266}
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
             <button
               type="button"

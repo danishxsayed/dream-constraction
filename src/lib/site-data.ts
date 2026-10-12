@@ -7,6 +7,7 @@ import res3 from "@/assets/Residential/Dream_Palace_Constructions_Consult_Cont_P
 import res4 from "@/assets/Residential/Dream_Palace_Constructions_Structural_Project_No-19.JPG";
 import res5 from "@/assets/Residential/IMG_4501.JPG";
 import res6 from "@/assets/Residential/Ingalalli at DWD.jpg";
+import res7 from "@/assets/Residential/WhatsApp Image 2026-10-12 at 14.01.15.jpeg";
 
 // Commercial & Institutional
 import com1 from "@/assets/Commercial and Institutional/Dream_Palace_Constructions_Consult_Cont_Project_No-12.JPG";
@@ -83,6 +84,10 @@ export const company = {
     {
       name: "X",
       href: "https://x.com",
+    },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@dreampalaceconstructions",
     },
   ],
 };
@@ -178,7 +183,7 @@ export const projects: Project[] = [
       "A turnkey family residence delivered from foundation to finishing. The brief called for generous daylight, durable material choices and a clear, predictable build programme.",
     scope: "Turnkey construction, finishing works, external works",
     servicesUsed: ["Residential Construction", "Interior Designing"],
-    gallery: [res6, res1, res2, res3, res4, res5],
+    gallery: [res6, res1, res2, res3, res4, res5, res7],
     placeholder: true,
   },
   {
